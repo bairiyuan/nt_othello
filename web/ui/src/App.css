@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+#parent {
+    margin: 0;
+    width: 100%;
+}
+
+#board {
+    float: left;
+    width: 50%;
+}
+#steps {
+    overflow: hidden;
+    width: 50%;
+}

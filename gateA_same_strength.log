@@ -1,0 +1,3 @@
+2025-10-14 13:57:51,186 INFO [init] loaded weights from model/model_ep120000.cpt.npy
+2025-10-14 13:58:09,627 INFO [eval] games=400  winrate=0.980 95%CI=[0.961,0.990]  w/l/d=392/6/2 (eval_depth=1, eval_width=2)
+2025-10-14 13:58:09,627 INFO [ckpt] final save -> model/model.cpt.npy
