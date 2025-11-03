@@ -150,7 +150,8 @@ def evaluate_vs_random(model, games: int = 200, seed: int = 123,
 # --------------------------- 自博弈训练 ---------------------------
 
 def self_play(episodes, model, epsilon, log_every, eval_every, ckpt_every,
-              ckpt_dir, save_latest, seed, train_depth, train_width, args):
+              ckpt_dir, save_latest, seed, train_depth, train_width, args ,
+              stop_winrate=0.95):
     rng = random.Random(seed)
     os.makedirs(ckpt_dir, exist_ok=True)
     latest_path = Path(save_latest)
@@ -195,6 +196,33 @@ def self_play(episodes, model, epsilon, log_every, eval_every, ckpt_every,
         if sb > sw: stat_w += 1
         elif sb < sw: stat_l += 1
         else: stat_d += 1
+
+                # ========== 新增：胜率停止检查 ==========
+        if eval_every > 0 and t % eval_every == 0:
+            eval_result = evaluate_vs_random(
+                model,
+                games=args.eval_games,
+                seed=seed + t,  # 使用不同的种子
+                depth=args.eval_depth,
+                width=args.eval_width
+            )
+            current_winrate = eval_result["winrate"]
+            
+            logging.info(f"[stop-check] games={t}, winrate={current_winrate:.3f}, target={stop_winrate}")
+            
+            # 检查停止条件
+            if current_winrate >= stop_winrate:
+                logging.info(f"[stop] 🎯 达到目标胜率 {current_winrate:.3f} >= {stop_winrate}, 停止训练!")
+                
+                # 保存最终模型
+                try:
+                    model.save(str(save_latest))
+                    logging.info(f"[ckpt] 最终模型已保存 -> {save_latest}")
+                except Exception as e:
+                    logging.exception(f"[ckpt] 最终保存失败: {e}")
+                
+                return  # 提前结束训练
+            # ========== 新增：胜率停止检查 ==========
 
         if t % log_every == 0:
             elapsed = time.time() - t0
@@ -502,6 +530,10 @@ def main():
     parser.add_argument("--mc-mode", type=str, default="current",
                         choices=["current", "uniform"],
                         help="MC 标签模式：current=当前执手交替取符号；uniform=整局统一标签")
+    
+    # 新增胜率停止参数
+    parser.add_argument("--stop-winrate", type=float, default=0.95, 
+                       help="当对随机模型的胜率达到此值时停止训练")
 
     args = parser.parse_args()
 
@@ -559,7 +591,8 @@ def main():
               seed=args.seed,
               train_depth=args.train_depth,
               train_width=args.train_width,
-              args=args)
+              args=args,
+              stop_winrate=args.stop_winrate)
 
 if __name__ == '__main__':
     main()

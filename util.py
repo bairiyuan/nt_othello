@@ -47,7 +47,8 @@ class Hash(object):
         self._positions = positions
         self._pieces = pieces
         if filename is None:
-            self._table = np.random.randint(0, 2<<60, (positions, pieces))
+            # self._table = np.random.randint(0, 2<<60, (positions, pieces))
+            self._table = np.random.randint(0, 2**60, (positions, pieces), dtype=np.int64)
         else:
             self._table = np.load(filename)
             assert (positions, pieces) == self._table.shape

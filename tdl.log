@@ -11508,3 +11508,118 @@
 2025-10-15 10:13:07,669 INFO [collect] games=148250/1000000  buffered~124863  flushed_total=5000000  seen_total=7988638 unique_total=5124863 dup_rate=0.358  speed=12.59 g/s
 2025-10-15 10:13:11,767 INFO [collect] games=148300/1000000  buffered~126433  flushed_total=5000000  seen_total=7991333 unique_total=5126433 dup_rate=0.359  speed=12.20 g/s
 2025-10-15 10:13:15,463 INFO [collect] games=148350/1000000  buffered~127923  flushed_total=5000000  seen_total=7994028 unique_total=5127923 dup_rate=0.359  speed=13.53 g/s
+2025-11-03 22:14:22,253 INFO [init] loaded weights from model/model.cpt.npy.6
+2025-11-03 22:14:31,388 INFO [train] games=100/20000  winrate=0.550  w/l/d=55/45/0  speed=10.9 games/s  eps=0.050
+2025-11-03 22:14:41,483 INFO [train] games=200/20000  winrate=0.680  w/l/d=68/31/1  speed=9.9 games/s  eps=0.050
+2025-11-03 22:14:51,242 INFO [train] games=300/20000  winrate=0.680  w/l/d=68/31/1  speed=10.2 games/s  eps=0.050
+2025-11-03 22:15:01,102 INFO [train] games=400/20000  winrate=0.620  w/l/d=62/34/4  speed=10.1 games/s  eps=0.050
+2025-11-03 22:15:11,353 INFO [train] games=500/20000  winrate=0.640  w/l/d=64/35/1  speed=9.8 games/s  eps=0.050
+2025-11-03 22:15:21,763 INFO [train] games=600/20000  winrate=0.630  w/l/d=63/35/2  speed=9.6 games/s  eps=0.050
+2025-11-03 22:15:31,264 INFO [train] games=700/20000  winrate=0.780  w/l/d=78/21/1  speed=10.5 games/s  eps=0.050
+2025-11-03 22:15:41,329 INFO [train] games=800/20000  winrate=0.730  w/l/d=73/25/2  speed=9.9 games/s  eps=0.050
+2025-11-03 22:15:52,964 INFO [train] games=900/20000  winrate=0.600  w/l/d=60/37/3  speed=8.6 games/s  eps=0.050
+2025-11-03 22:16:10,591 INFO [train] games=1000/20000  winrate=0.770  w/l/d=77/21/2  speed=5.7 games/s  eps=0.050
+2025-11-03 22:16:23,894 INFO [train] games=1100/20000  winrate=0.690  w/l/d=69/31/0  speed=7.5 games/s  eps=0.050
+2025-11-03 22:16:35,725 INFO [train] games=1200/20000  winrate=0.700  w/l/d=70/28/2  speed=8.5 games/s  eps=0.050
+2025-11-03 22:16:50,233 INFO [train] games=1300/20000  winrate=0.760  w/l/d=76/21/3  speed=6.9 games/s  eps=0.050
+2025-11-03 22:16:59,718 INFO [train] games=1400/20000  winrate=0.740  w/l/d=74/24/2  speed=10.5 games/s  eps=0.050
+2025-11-03 22:17:09,247 INFO [train] games=1500/20000  winrate=0.700  w/l/d=70/27/3  speed=10.5 games/s  eps=0.050
+2025-11-03 22:17:18,813 INFO [train] games=1600/20000  winrate=0.760  w/l/d=76/24/0  speed=10.5 games/s  eps=0.050
+2025-11-03 22:17:28,732 INFO [train] games=1700/20000  winrate=0.630  w/l/d=63/36/1  speed=10.1 games/s  eps=0.050
+2025-11-03 22:17:38,202 INFO [train] games=1800/20000  winrate=0.680  w/l/d=68/31/1  speed=10.6 games/s  eps=0.050
+2025-11-03 22:17:47,733 INFO [train] games=1900/20000  winrate=0.710  w/l/d=71/25/4  speed=10.5 games/s  eps=0.050
+2025-11-03 22:19:50,331 INFO [init] loaded weights from model/model.cpt.npy.6
+2025-11-03 22:19:59,732 INFO [train] games=100/700000  winrate=0.630  w/l/d=63/35/2  speed=10.6 games/s  eps=0.050
+2025-11-03 22:20:09,991 INFO [train] games=200/700000  winrate=0.750  w/l/d=75/22/3  speed=9.7 games/s  eps=0.050
+2025-11-03 22:20:19,946 INFO [train] games=300/700000  winrate=0.660  w/l/d=66/33/1  speed=10.0 games/s  eps=0.050
+2025-11-03 22:20:29,272 INFO [train] games=400/700000  winrate=0.590  w/l/d=59/40/1  speed=10.7 games/s  eps=0.050
+2025-11-03 22:20:38,514 INFO [train] games=500/700000  winrate=0.530  w/l/d=53/45/2  speed=10.8 games/s  eps=0.050
+2025-11-03 22:20:48,376 INFO [train] games=600/700000  winrate=0.660  w/l/d=66/32/2  speed=10.1 games/s  eps=0.050
+2025-11-03 22:20:58,068 INFO [train] games=700/700000  winrate=0.460  w/l/d=46/50/4  speed=10.3 games/s  eps=0.050
+2025-11-03 22:21:24,732 INFO [init] loaded weights from model/model.cpt.npy.6
+2025-11-03 22:21:33,942 INFO [train] games=100/20000  winrate=0.490  w/l/d=49/46/5  speed=10.9 games/s  eps=0.050
+2025-11-03 22:21:43,969 INFO [train] games=200/20000  winrate=0.720  w/l/d=72/28/0  speed=10.0 games/s  eps=0.050
+2025-11-03 22:21:53,801 INFO [train] games=300/20000  winrate=0.620  w/l/d=62/38/0  speed=10.2 games/s  eps=0.050
+2025-11-03 22:22:03,572 INFO [train] games=400/20000  winrate=0.730  w/l/d=73/24/3  speed=10.2 games/s  eps=0.050
+2025-11-03 22:22:12,996 INFO [train] games=500/20000  winrate=0.750  w/l/d=75/22/3  speed=10.6 games/s  eps=0.050
+2025-11-03 22:22:22,927 INFO [train] games=600/20000  winrate=0.780  w/l/d=78/21/1  speed=10.1 games/s  eps=0.050
+2025-11-03 22:22:31,301 INFO [train] games=700/20000  winrate=0.640  w/l/d=64/34/2  speed=11.9 games/s  eps=0.050
+2025-11-03 22:22:40,357 INFO [train] games=800/20000  winrate=0.410  w/l/d=41/57/2  speed=11.0 games/s  eps=0.050
+2025-11-03 22:22:48,827 INFO [train] games=900/20000  winrate=0.510  w/l/d=51/46/3  speed=11.8 games/s  eps=0.050
+2025-11-03 22:22:57,505 INFO [train] games=1000/20000  winrate=0.490  w/l/d=49/50/1  speed=11.5 games/s  eps=0.050
+2025-11-03 22:23:07,198 INFO [train] games=1100/20000  winrate=0.580  w/l/d=58/41/1  speed=10.3 games/s  eps=0.050
+2025-11-03 22:23:18,888 INFO [train] games=1200/20000  winrate=0.410  w/l/d=41/57/2  speed=8.6 games/s  eps=0.050
+2025-11-03 22:23:27,533 INFO [train] games=1300/20000  winrate=0.400  w/l/d=40/57/3  speed=11.6 games/s  eps=0.050
+2025-11-03 22:23:36,885 INFO [train] games=1400/20000  winrate=0.610  w/l/d=61/37/2  speed=10.7 games/s  eps=0.050
+2025-11-03 22:23:45,863 INFO [train] games=1500/20000  winrate=0.450  w/l/d=45/53/2  speed=11.1 games/s  eps=0.050
+2025-11-03 22:23:55,167 INFO [train] games=1600/20000  winrate=0.730  w/l/d=73/25/2  speed=10.7 games/s  eps=0.050
+2025-11-03 22:24:04,553 INFO [train] games=1700/20000  winrate=0.530  w/l/d=53/47/0  speed=10.7 games/s  eps=0.050
+2025-11-03 22:24:13,867 INFO [train] games=1800/20000  winrate=0.390  w/l/d=39/58/3  speed=10.7 games/s  eps=0.050
+2025-11-03 22:24:22,665 INFO [train] games=1900/20000  winrate=0.490  w/l/d=49/51/0  speed=11.4 games/s  eps=0.050
+2025-11-03 22:32:54,522 INFO [init] loaded weights from model/model.cpt.npy.6
+2025-11-03 22:33:03,478 INFO [train] games=100/20000  winrate=0.590  w/l/d=59/41/0  speed=11.2 games/s  eps=0.050
+2025-11-03 22:33:12,106 INFO [train] games=200/20000  winrate=0.760  w/l/d=76/24/0  speed=11.6 games/s  eps=0.050
+2025-11-03 22:33:21,046 INFO [train] games=300/20000  winrate=0.700  w/l/d=70/30/0  speed=11.2 games/s  eps=0.050
+2025-11-03 22:33:30,123 INFO [train] games=400/20000  winrate=0.640  w/l/d=64/35/1  speed=11.0 games/s  eps=0.050
+2025-11-03 22:33:39,928 INFO [train] games=500/20000  winrate=0.620  w/l/d=62/33/5  speed=10.2 games/s  eps=0.050
+2025-11-03 22:33:49,056 INFO [train] games=600/20000  winrate=0.500  w/l/d=50/47/3  speed=11.0 games/s  eps=0.050
+2025-11-03 22:33:58,873 INFO [train] games=700/20000  winrate=0.590  w/l/d=59/41/0  speed=10.2 games/s  eps=0.050
+2025-11-03 22:34:08,280 INFO [train] games=800/20000  winrate=0.680  w/l/d=68/30/2  speed=10.6 games/s  eps=0.050
+2025-11-03 22:34:17,078 INFO [train] games=900/20000  winrate=0.520  w/l/d=52/48/0  speed=11.4 games/s  eps=0.050
+2025-11-03 22:34:26,216 INFO [train] games=1000/20000  winrate=0.520  w/l/d=52/48/0  speed=10.9 games/s  eps=0.050
+2025-11-03 22:34:26,217 INFO [ckpt] saved -> model\model_ep1000.cpt.npy (and updated model.cpt.npy)
+2025-11-03 22:34:35,821 INFO [train] games=1100/20000  winrate=0.570  w/l/d=57/42/1  speed=10.4 games/s  eps=0.050
+2025-11-03 22:34:45,360 INFO [train] games=1200/20000  winrate=0.640  w/l/d=64/36/0  speed=10.5 games/s  eps=0.050
+2025-11-03 22:34:55,032 INFO [train] games=1300/20000  winrate=0.650  w/l/d=65/33/2  speed=10.3 games/s  eps=0.050
+2025-11-03 22:35:05,361 INFO [train] games=1400/20000  winrate=0.820  w/l/d=82/13/5  speed=9.7 games/s  eps=0.050
+2025-11-03 22:35:14,599 INFO [train] games=1500/20000  winrate=0.730  w/l/d=73/22/5  speed=10.8 games/s  eps=0.050
+2025-11-03 22:35:26,419 INFO [train] games=1600/20000  winrate=0.590  w/l/d=59/40/1  speed=8.5 games/s  eps=0.050
+2025-11-03 22:35:41,975 INFO [train] games=1700/20000  winrate=0.550  w/l/d=55/43/2  speed=6.4 games/s  eps=0.050
+2025-11-03 22:35:50,524 INFO [train] games=1800/20000  winrate=0.510  w/l/d=51/49/0  speed=11.7 games/s  eps=0.050
+2025-11-03 22:35:59,551 INFO [train] games=1900/20000  winrate=0.630  w/l/d=63/35/2  speed=11.1 games/s  eps=0.050
+2025-11-03 22:36:37,558 INFO [init] loaded weights from model/model.cpt.npy.6
+2025-11-03 22:36:46,710 INFO [train] games=100/20000  winrate=0.690  w/l/d=69/31/0  speed=10.9 games/s  eps=0.050
+2025-11-03 22:36:55,781 INFO [train] games=200/20000  winrate=0.690  w/l/d=69/30/1  speed=11.0 games/s  eps=0.050
+2025-11-03 22:37:05,261 INFO [train] games=300/20000  winrate=0.690  w/l/d=69/31/0  speed=10.5 games/s  eps=0.050
+2025-11-03 22:37:14,826 INFO [train] games=400/20000  winrate=0.610  w/l/d=61/34/5  speed=10.5 games/s  eps=0.050
+2025-11-03 22:37:24,464 INFO [train] games=500/20000  winrate=0.680  w/l/d=68/30/2  speed=10.4 games/s  eps=0.050
+2025-11-03 22:37:33,704 INFO [train] games=600/20000  winrate=0.420  w/l/d=42/55/3  speed=10.8 games/s  eps=0.050
+2025-11-03 22:37:43,229 INFO [train] games=700/20000  winrate=0.530  w/l/d=53/45/2  speed=10.5 games/s  eps=0.050
+2025-11-03 22:37:53,023 INFO [train] games=800/20000  winrate=0.440  w/l/d=44/54/2  speed=10.2 games/s  eps=0.050
+2025-11-03 22:38:02,771 INFO [train] games=900/20000  winrate=0.570  w/l/d=57/42/1  speed=10.3 games/s  eps=0.050
+2025-11-03 22:38:12,558 INFO [train] games=1000/20000  winrate=0.580  w/l/d=58/39/3  speed=10.2 games/s  eps=0.050
+2025-11-03 22:38:12,559 INFO [ckpt] saved -> model\model_ep1000.cpt.npy (and updated model.cpt.npy)
+2025-11-03 22:38:22,240 INFO [train] games=1100/20000  winrate=0.460  w/l/d=46/53/1  speed=10.3 games/s  eps=0.050
+2025-11-03 22:38:31,581 INFO [train] games=1200/20000  winrate=0.500  w/l/d=50/48/2  speed=10.7 games/s  eps=0.050
+2025-11-03 22:38:40,877 INFO [train] games=1300/20000  winrate=0.550  w/l/d=55/42/3  speed=10.8 games/s  eps=0.050
+2025-11-03 22:38:50,447 INFO [train] games=1400/20000  winrate=0.510  w/l/d=51/46/3  speed=10.4 games/s  eps=0.050
+2025-11-03 22:39:00,229 INFO [train] games=1500/20000  winrate=0.500  w/l/d=50/50/0  speed=10.2 games/s  eps=0.050
+2025-11-03 22:39:09,963 INFO [train] games=1600/20000  winrate=0.660  w/l/d=66/32/2  speed=10.3 games/s  eps=0.050
+2025-11-03 22:39:19,672 INFO [train] games=1700/20000  winrate=0.680  w/l/d=68/29/3  speed=10.3 games/s  eps=0.050
+2025-11-03 22:39:29,483 INFO [train] games=1800/20000  winrate=0.480  w/l/d=48/49/3  speed=10.2 games/s  eps=0.050
+2025-11-03 22:39:38,244 INFO [train] games=1900/20000  winrate=0.570  w/l/d=57/38/5  speed=11.4 games/s  eps=0.050
+2025-11-03 22:39:47,349 INFO [train] games=2000/20000  winrate=0.340  w/l/d=34/64/2  speed=11.0 games/s  eps=0.050
+2025-11-03 23:02:21,939 INFO [init] loaded weights from model/model.cpt.npy.6
+2025-11-03 23:02:32,237 INFO [train] games=100/20000  winrate=0.620  w/l/d=62/35/3  speed=9.7 games/s  eps=0.050
+2025-11-03 23:02:42,371 INFO [train] games=200/20000  winrate=0.680  w/l/d=68/31/1  speed=9.9 games/s  eps=0.050
+2025-11-03 23:02:52,586 INFO [train] games=300/20000  winrate=0.660  w/l/d=66/32/2  speed=9.8 games/s  eps=0.050
+2025-11-03 23:03:02,861 INFO [train] games=400/20000  winrate=0.660  w/l/d=66/30/4  speed=9.7 games/s  eps=0.050
+2025-11-03 23:03:12,045 INFO [train] games=500/20000  winrate=0.720  w/l/d=72/28/0  speed=10.9 games/s  eps=0.050
+2025-11-03 23:03:21,920 INFO [train] games=600/20000  winrate=0.660  w/l/d=66/34/0  speed=10.1 games/s  eps=0.050
+2025-11-03 23:03:31,765 INFO [train] games=700/20000  winrate=0.520  w/l/d=52/44/4  speed=10.2 games/s  eps=0.050
+2025-11-03 23:03:41,437 INFO [train] games=800/20000  winrate=0.520  w/l/d=52/47/1  speed=10.3 games/s  eps=0.050
+2025-11-03 23:03:51,371 INFO [train] games=900/20000  winrate=0.490  w/l/d=49/50/1  speed=10.1 games/s  eps=0.050
+2025-11-03 23:04:01,448 INFO [train] games=1000/20000  winrate=0.570  w/l/d=57/43/0  speed=9.9 games/s  eps=0.050
+2025-11-03 23:04:01,449 INFO [ckpt] saved -> model\model_ep1000.cpt.npy (and updated model.cpt.npy)
+2025-11-03 23:04:11,087 INFO [train] games=1100/20000  winrate=0.590  w/l/d=59/38/3  speed=10.4 games/s  eps=0.050
+2025-11-03 23:04:20,004 INFO [train] games=1200/20000  winrate=0.570  w/l/d=57/40/3  speed=11.2 games/s  eps=0.050
+2025-11-03 23:04:29,382 INFO [train] games=1300/20000  winrate=0.500  w/l/d=50/47/3  speed=10.7 games/s  eps=0.050
+2025-11-03 23:04:38,763 INFO [train] games=1400/20000  winrate=0.760  w/l/d=76/23/1  speed=10.7 games/s  eps=0.050
+2025-11-03 23:04:48,351 INFO [train] games=1500/20000  winrate=0.640  w/l/d=64/36/0  speed=10.4 games/s  eps=0.050
+2025-11-03 23:04:57,559 INFO [train] games=1600/20000  winrate=0.760  w/l/d=76/22/2  speed=10.9 games/s  eps=0.050
+2025-11-03 23:05:06,992 INFO [train] games=1700/20000  winrate=0.460  w/l/d=46/49/5  speed=10.6 games/s  eps=0.050
+2025-11-03 23:05:16,170 INFO [train] games=1800/20000  winrate=0.440  w/l/d=44/54/2  speed=10.9 games/s  eps=0.050
+2025-11-03 23:05:25,462 INFO [train] games=1900/20000  winrate=0.720  w/l/d=72/28/0  speed=10.8 games/s  eps=0.050
+2025-11-03 23:09:19,074 INFO [stop-check] games=2000, winrate=1.000, target=0.95
+2025-11-03 23:09:19,074 INFO [stop] 🎯 达到目标胜率 1.000 >= 0.95, 停止训练!
+2025-11-03 23:09:19,075 INFO [ckpt] 最终模型已保存 -> model/model.cpt.npy
