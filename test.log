@@ -1,0 +1,48 @@
+2025-11-05 22:22:08,128 INFO [init] loaded weights from model/model.cpt.npy.6
+2025-11-05 22:22:08,129 INFO [mode] collect-only -> data/test  (depth=1, width=2)
+2025-11-05 22:23:48,251 INFO [init] loaded weights from model/model.cpt.npy.6
+2025-11-05 22:23:48,251 INFO [mode] collect-only -> data/test  (depth=1, width=2)
+2025-11-05 22:23:54,342 INFO [collect] games=50/1000  buffered~2798  flushed_total=0  seen_total=2800 unique_total=2798 dup_rate=0.001  speed=8.21 g/s
+2025-11-05 22:24:02,314 INFO [collect] wrote 5000 rows -> shard_00000.npz (total=5000)
+2025-11-05 22:24:02,320 INFO [collect] games=89/1000  buffered~5000  flushed_total=5000  seen_total=5040 unique_total=5000 dup_rate=0.008  speed=6.27 g/s
+2025-11-05 22:24:04,562 INFO [collect] games=100/1000  buffered~586  flushed_total=5000  seen_total=5600 unique_total=5586 dup_rate=0.002  speed=22.30 g/s
+2025-11-05 22:24:11,047 INFO [collect] games=150/1000  buffered~3382  flushed_total=5000  seen_total=8400 unique_total=8382 dup_rate=0.002  speed=7.71 g/s
+2025-11-05 22:24:14,827 INFO [collect] wrote 5000 rows -> shard_00001.npz (total=10000)
+2025-11-05 22:24:14,832 INFO [collect] games=179/1000  buffered~5000  flushed_total=10000  seen_total=10079 unique_total=10000 dup_rate=0.008  speed=13.21 g/s
+2025-11-05 22:24:17,746 INFO [collect] games=200/1000  buffered~1163  flushed_total=10000  seen_total=11199 unique_total=11163 dup_rate=0.003  speed=17.16 g/s
+2025-11-05 22:24:28,821 INFO [collect] games=250/1000  buffered~3948  flushed_total=10000  seen_total=13999 unique_total=13948 dup_rate=0.004  speed=4.52 g/s
+2025-11-05 22:24:33,087 INFO [collect] wrote 5000 rows -> shard_00002.npz (total=15000)
+2025-11-05 22:24:33,093 INFO [collect] games=268/1000  buffered~5000  flushed_total=15000  seen_total=15062 unique_total=15000 dup_rate=0.004  speed=11.71 g/s
+2025-11-05 22:24:38,653 INFO [collect] games=300/1000  buffered~1730  flushed_total=15000  seen_total=16798 unique_total=16730 dup_rate=0.004  speed=8.99 g/s
+2025-11-05 22:24:44,830 INFO [collect] games=350/1000  buffered~4512  flushed_total=15000  seen_total=19597 unique_total=19512 dup_rate=0.004  speed=8.10 g/s
+2025-11-05 22:24:46,155 INFO [collect] wrote 5000 rows -> shard_00003.npz (total=20000)
+2025-11-05 22:24:46,160 INFO [collect] games=358/1000  buffered~5000  flushed_total=20000  seen_total=20101 unique_total=20000 dup_rate=0.005  speed=37.61 g/s
+2025-11-05 22:24:53,204 INFO [collect] games=400/1000  buffered~2289  flushed_total=20000  seen_total=22397 unique_total=22289 dup_rate=0.005  speed=7.10 g/s
+2025-11-05 22:25:02,571 INFO [collect] wrote 5000 rows -> shard_00004.npz (total=25000)
+2025-11-05 22:25:02,576 INFO [collect] games=448/1000  buffered~5000  flushed_total=25000  seen_total=25139 unique_total=25000 dup_rate=0.006  speed=5.34 g/s
+2025-11-05 22:25:02,727 INFO [collect] games=450/1000  buffered~56  flushed_total=25000  seen_total=25195 unique_total=25056 dup_rate=0.006  speed=331.36 g/s
+2025-11-05 22:25:09,138 INFO [collect] games=500/1000  buffered~2780  flushed_total=25000  seen_total=27941 unique_total=27780 dup_rate=0.006  speed=7.80 g/s
+2025-11-05 22:25:15,772 INFO [collect] wrote 5000 rows -> shard_00005.npz (total=30000)
+2025-11-05 22:25:15,776 INFO [collect] games=540/1000  buffered~5000  flushed_total=30000  seen_total=30237 unique_total=30000 dup_rate=0.008  speed=7.53 g/s
+2025-11-05 22:25:16,998 INFO [collect] games=550/1000  buffered~541  flushed_total=30000  seen_total=30741 unique_total=30541 dup_rate=0.007  speed=40.93 g/s
+2025-11-05 22:25:23,452 INFO [collect] games=600/1000  buffered~3301  flushed_total=30000  seen_total=33541 unique_total=33301 dup_rate=0.007  speed=7.75 g/s
+2025-11-05 22:25:27,622 INFO [collect] wrote 5000 rows -> shard_00006.npz (total=35000)
+2025-11-05 22:25:27,626 INFO [collect] games=630/1000  buffered~5000  flushed_total=35000  seen_total=35277 unique_total=35000 dup_rate=0.008  speed=11.98 g/s
+2025-11-05 22:25:30,141 INFO [collect] games=650/1000  buffered~1054  flushed_total=35000  seen_total=36341 unique_total=36054 dup_rate=0.008  speed=19.88 g/s
+2025-11-05 22:25:40,226 INFO [collect] games=700/1000  buffered~3810  flushed_total=35000  seen_total=39141 unique_total=38810 dup_rate=0.008  speed=4.96 g/s
+2025-11-05 22:25:45,212 INFO [collect] wrote 5000 rows -> shard_00007.npz (total=40000)
+2025-11-05 22:25:45,219 INFO [collect] games=721/1000  buffered~5000  flushed_total=40000  seen_total=40373 unique_total=40000 dup_rate=0.009  speed=10.02 g/s
+2025-11-05 22:25:51,486 INFO [collect] games=750/1000  buffered~1564  flushed_total=40000  seen_total=41940 unique_total=41564 dup_rate=0.009  speed=7.98 g/s
+2025-11-05 22:25:59,141 INFO [collect] games=800/1000  buffered~4326  flushed_total=40000  seen_total=44740 unique_total=44326 dup_rate=0.009  speed=6.53 g/s
+2025-11-05 22:26:00,928 INFO [collect] wrote 5000 rows -> shard_00008.npz (total=45000)
+2025-11-05 22:26:00,933 INFO [collect] games=812/1000  buffered~5000  flushed_total=45000  seen_total=45468 unique_total=45000 dup_rate=0.010  speed=27.90 g/s
+2025-11-05 22:26:05,707 INFO [collect] games=850/1000  buffered~2087  flushed_total=45000  seen_total=47540 unique_total=47087 dup_rate=0.010  speed=10.48 g/s
+2025-11-05 22:26:12,169 INFO [collect] games=900/1000  buffered~4847  flushed_total=45000  seen_total=50340 unique_total=49847 dup_rate=0.010  speed=7.74 g/s
+2025-11-05 22:26:12,647 INFO [collect] wrote 5000 rows -> shard_00009.npz (total=50000)
+2025-11-05 22:26:12,653 INFO [collect] games=902/1000  buffered~5000  flushed_total=50000  seen_total=50508 unique_total=50000 dup_rate=0.010  speed=103.40 g/s
+2025-11-05 22:26:18,638 INFO [collect] games=950/1000  buffered~2552  flushed_total=50000  seen_total=53088 unique_total=52552 dup_rate=0.010  speed=8.35 g/s
+2025-11-05 22:26:24,544 INFO [collect] wrote 5000 rows -> shard_00010.npz (total=55000)
+2025-11-05 22:26:24,549 INFO [collect] games=994/1000  buffered~5000  flushed_total=55000  seen_total=55603 unique_total=55000 dup_rate=0.011  speed=8.46 g/s
+2025-11-05 22:26:25,219 INFO [collect] games=1000/1000  buffered~293  flushed_total=55000  seen_total=55883 unique_total=55293 dup_rate=0.011  speed=74.58 g/s
+2025-11-05 22:26:25,228 INFO [collect] wrote 293 rows -> shard_00011.npz (total=55293)
+2025-11-05 22:26:25,268 INFO [ckpt] final save -> model/model_latest.cpt.npy

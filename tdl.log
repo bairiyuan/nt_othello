@@ -11623,3 +11623,66 @@
 2025-11-03 23:09:19,074 INFO [stop-check] games=2000, winrate=1.000, target=0.95
 2025-11-03 23:09:19,074 INFO [stop] 🎯 达到目标胜率 1.000 >= 0.95, 停止训练!
 2025-11-03 23:09:19,075 INFO [ckpt] 最终模型已保存 -> model/model.cpt.npy
+2025-11-05 16:28:15,930 INFO [init] loaded weights from model/model.cpt.npy.6
+2025-11-05 16:28:15,931 INFO [mode] collect-only -> data/train  (depth=1, width=2)
+2025-11-05 16:28:18,504 INFO [collect] games=50/700000  buffered~60  flushed_total=0  seen_total=3000 unique_total=60 dup_rate=0.980  speed=19.44 g/s
+2025-11-05 16:28:20,863 INFO [collect] games=100/700000  buffered~60  flushed_total=0  seen_total=6000 unique_total=60 dup_rate=0.990  speed=21.20 g/s
+2025-11-05 16:28:23,239 INFO [collect] games=150/700000  buffered~60  flushed_total=0  seen_total=9000 unique_total=60 dup_rate=0.993  speed=21.05 g/s
+2025-11-05 16:28:25,523 INFO [collect] games=200/700000  buffered~60  flushed_total=0  seen_total=12000 unique_total=60 dup_rate=0.995  speed=21.90 g/s
+2025-11-05 16:28:27,871 INFO [collect] games=250/700000  buffered~60  flushed_total=0  seen_total=15000 unique_total=60 dup_rate=0.996  speed=21.30 g/s
+2025-11-05 16:28:30,305 INFO [collect] games=300/700000  buffered~60  flushed_total=0  seen_total=18000 unique_total=60 dup_rate=0.997  speed=20.54 g/s
+2025-11-05 16:28:32,839 INFO [collect] games=350/700000  buffered~60  flushed_total=0  seen_total=21000 unique_total=60 dup_rate=0.997  speed=19.73 g/s
+2025-11-05 16:28:35,419 INFO [collect] games=400/700000  buffered~60  flushed_total=0  seen_total=24000 unique_total=60 dup_rate=0.998  speed=19.38 g/s
+2025-11-05 16:28:37,820 INFO [collect] games=450/700000  buffered~60  flushed_total=0  seen_total=27000 unique_total=60 dup_rate=0.998  speed=20.83 g/s
+2025-11-05 16:28:41,134 INFO [collect] games=500/700000  buffered~60  flushed_total=0  seen_total=30000 unique_total=60 dup_rate=0.998  speed=15.09 g/s
+2025-11-05 16:28:45,729 INFO [collect] games=550/700000  buffered~60  flushed_total=0  seen_total=33000 unique_total=60 dup_rate=0.998  speed=10.88 g/s
+2025-11-05 16:28:50,186 INFO [collect] games=600/700000  buffered~60  flushed_total=0  seen_total=36000 unique_total=60 dup_rate=0.998  speed=11.22 g/s
+2025-11-05 16:28:52,497 INFO [collect] games=650/700000  buffered~60  flushed_total=0  seen_total=39000 unique_total=60 dup_rate=0.998  speed=21.64 g/s
+2025-11-05 16:28:54,775 INFO [collect] games=700/700000  buffered~60  flushed_total=0  seen_total=42000 unique_total=60 dup_rate=0.999  speed=21.95 g/s
+2025-11-05 16:28:57,063 INFO [collect] games=750/700000  buffered~60  flushed_total=0  seen_total=45000 unique_total=60 dup_rate=0.999  speed=21.86 g/s
+2025-11-05 16:28:59,352 INFO [collect] games=800/700000  buffered~60  flushed_total=0  seen_total=48000 unique_total=60 dup_rate=0.999  speed=21.85 g/s
+2025-11-05 16:29:01,029 INFO [collect] stop by dup_rate: seen_total=50040 unique_total=60 dup_rate=0.999
+2025-11-05 16:29:01,038 INFO [collect] wrote 60 rows -> shard_00000.npz (total=60)
+2025-11-05 16:29:01,039 INFO [ckpt] final save -> model/model.cpt.npy
+2025-11-05 17:24:10,903 INFO [init] loaded weights from model/model_ep180000.cpt.npy
+2025-11-05 17:24:10,903 INFO [mode] collect-only -> data/v3/train_mc  (depth=1, width=2)
+2025-11-05 17:24:17,370 INFO [collect] games=50/1000000  buffered~2699  flushed_total=0  seen_total=2699 unique_total=2699 dup_rate=0.000  speed=7.73 g/s
+2025-11-05 17:24:23,359 INFO [collect] games=100/1000000  buffered~5392  flushed_total=0  seen_total=5398 unique_total=5392 dup_rate=0.001  speed=8.35 g/s
+2025-11-05 17:24:29,343 INFO [collect] games=150/1000000  buffered~8058  flushed_total=0  seen_total=8093 unique_total=8058 dup_rate=0.004  speed=8.36 g/s
+2025-11-05 17:24:35,350 INFO [collect] games=200/1000000  buffered~10734  flushed_total=0  seen_total=10792 unique_total=10734 dup_rate=0.005  speed=8.32 g/s
+2025-11-05 17:24:41,142 INFO [collect] games=250/1000000  buffered~13398  flushed_total=0  seen_total=13492 unique_total=13398 dup_rate=0.007  speed=8.63 g/s
+2025-11-05 17:24:47,357 INFO [collect] games=300/1000000  buffered~16062  flushed_total=0  seen_total=16176 unique_total=16062 dup_rate=0.007  speed=8.04 g/s
+2025-11-05 17:24:56,586 INFO [collect] games=350/1000000  buffered~18751  flushed_total=0  seen_total=18871 unique_total=18751 dup_rate=0.006  speed=5.42 g/s
+2025-11-05 17:25:06,418 INFO [collect] games=400/1000000  buffered~21384  flushed_total=0  seen_total=21568 unique_total=21384 dup_rate=0.009  speed=5.09 g/s
+2025-11-05 17:25:14,042 INFO [collect] games=450/1000000  buffered~24038  flushed_total=0  seen_total=24264 unique_total=24038 dup_rate=0.009  speed=6.56 g/s
+2025-11-05 17:25:21,933 INFO [collect] games=500/1000000  buffered~26631  flushed_total=0  seen_total=26961 unique_total=26631 dup_rate=0.012  speed=6.34 g/s
+2025-11-05 17:25:28,009 INFO [collect] games=550/1000000  buffered~29260  flushed_total=0  seen_total=29660 unique_total=29260 dup_rate=0.013  speed=8.23 g/s
+2025-11-05 17:25:33,961 INFO [collect] games=600/1000000  buffered~31884  flushed_total=0  seen_total=32353 unique_total=31884 dup_rate=0.014  speed=8.40 g/s
+2025-11-05 17:25:41,869 INFO [collect] games=650/1000000  buffered~34519  flushed_total=0  seen_total=35041 unique_total=34519 dup_rate=0.015  speed=6.32 g/s
+2025-11-05 17:25:51,265 INFO [collect] games=700/1000000  buffered~37045  flushed_total=0  seen_total=37737 unique_total=37045 dup_rate=0.018  speed=5.32 g/s
+2025-11-05 17:25:57,902 INFO [collect] games=750/1000000  buffered~39649  flushed_total=0  seen_total=40436 unique_total=39649 dup_rate=0.019  speed=7.53 g/s
+2025-11-05 17:26:04,678 INFO [collect] games=800/1000000  buffered~42238  flushed_total=0  seen_total=43133 unique_total=42238 dup_rate=0.021  speed=7.38 g/s
+2025-11-05 17:26:14,518 INFO [collect] games=850/1000000  buffered~44882  flushed_total=0  seen_total=45831 unique_total=44882 dup_rate=0.021  speed=5.08 g/s
+2025-11-05 17:26:23,536 INFO [collect] games=900/1000000  buffered~47381  flushed_total=0  seen_total=48514 unique_total=47381 dup_rate=0.023  speed=5.54 g/s
+2025-11-05 17:26:29,605 INFO [collect] games=950/1000000  buffered~49954  flushed_total=0  seen_total=51212 unique_total=49954 dup_rate=0.025  speed=8.24 g/s
+2025-11-05 17:26:35,489 INFO [collect] games=1000/1000000  buffered~52485  flushed_total=0  seen_total=53910 unique_total=52485 dup_rate=0.026  speed=8.50 g/s
+2025-11-05 17:26:43,534 INFO [collect] games=1050/1000000  buffered~54958  flushed_total=0  seen_total=56607 unique_total=54958 dup_rate=0.029  speed=6.22 g/s
+2025-11-05 17:26:53,153 INFO [collect] games=1100/1000000  buffered~57575  flushed_total=0  seen_total=59305 unique_total=57575 dup_rate=0.029  speed=5.20 g/s
+2025-11-05 17:27:02,860 INFO [collect] games=1150/1000000  buffered~60109  flushed_total=0  seen_total=62002 unique_total=60109 dup_rate=0.031  speed=5.15 g/s
+2025-11-05 17:27:12,478 INFO [collect] games=1200/1000000  buffered~62755  flushed_total=0  seen_total=64701 unique_total=62755 dup_rate=0.030  speed=5.20 g/s
+2025-11-05 17:27:21,872 INFO [collect] games=1250/1000000  buffered~65306  flushed_total=0  seen_total=67384 unique_total=65306 dup_rate=0.031  speed=5.32 g/s
+2025-11-05 17:27:31,023 INFO [collect] games=1300/1000000  buffered~67818  flushed_total=0  seen_total=70084 unique_total=67818 dup_rate=0.032  speed=5.46 g/s
+2025-11-05 17:27:40,506 INFO [collect] games=1350/1000000  buffered~70355  flushed_total=0  seen_total=72781 unique_total=70355 dup_rate=0.033  speed=5.27 g/s
+2025-11-05 17:27:49,394 INFO [collect] games=1400/1000000  buffered~72971  flushed_total=0  seen_total=75480 unique_total=72971 dup_rate=0.033  speed=5.63 g/s
+2025-11-05 17:27:54,927 INFO [collect] games=1450/1000000  buffered~75416  flushed_total=0  seen_total=78179 unique_total=75416 dup_rate=0.035  speed=9.04 g/s
+2025-11-05 17:28:00,824 INFO [collect] games=1500/1000000  buffered~77997  flushed_total=0  seen_total=80867 unique_total=77997 dup_rate=0.035  speed=8.48 g/s
+2025-11-05 17:28:06,701 INFO [collect] games=1550/1000000  buffered~80551  flushed_total=0  seen_total=83562 unique_total=80551 dup_rate=0.036  speed=8.51 g/s
+2025-11-05 17:28:14,192 INFO [collect] games=1600/1000000  buffered~83071  flushed_total=0  seen_total=86248 unique_total=83071 dup_rate=0.037  speed=6.67 g/s
+2025-11-05 17:28:20,207 INFO [collect] games=1650/1000000  buffered~85569  flushed_total=0  seen_total=88948 unique_total=85569 dup_rate=0.038  speed=8.31 g/s
+2025-11-05 17:28:26,185 INFO [collect] games=1700/1000000  buffered~88076  flushed_total=0  seen_total=91642 unique_total=88076 dup_rate=0.039  speed=8.36 g/s
+2025-11-05 17:28:33,555 INFO [collect] games=1750/1000000  buffered~90600  flushed_total=0  seen_total=94338 unique_total=90600 dup_rate=0.040  speed=6.78 g/s
+2025-11-05 17:28:39,826 INFO [collect] games=1800/1000000  buffered~93151  flushed_total=0  seen_total=97036 unique_total=93151 dup_rate=0.040  speed=7.97 g/s
+2025-11-05 17:28:46,115 INFO [collect] games=1850/1000000  buffered~95614  flushed_total=0  seen_total=99735 unique_total=95614 dup_rate=0.041  speed=7.95 g/s
+2025-11-05 17:28:52,169 INFO [collect] games=1900/1000000  buffered~97933  flushed_total=0  seen_total=102428 unique_total=97933 dup_rate=0.044  speed=8.26 g/s
+2025-11-05 17:28:58,234 INFO [collect] games=1950/1000000  buffered~100432  flushed_total=0  seen_total=105119 unique_total=100432 dup_rate=0.045  speed=8.25 g/s
+2025-11-05 17:29:03,990 INFO [collect] games=2000/1000000  buffered~102984  flushed_total=0  seen_total=107814 unique_total=102984 dup_rate=0.045  speed=8.69 g/s

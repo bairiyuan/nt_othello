@@ -312,7 +312,8 @@ def collect_selfplay(episodes, model, depth, width, out_dir, max_rows, write_leg
                      stop_dup_rate=0.95, stop_min_seen=50_000,
                      log_every_games=50,
                      metrics_file="", metrics_every_games=50,
-                     mc_reward=False, mc_mode="current"):
+                     mc_reward=False, mc_mode="current",
+                     selection_temperature=0.3):
     """
     只采集，不训练。严格唯一：(canonical(s),a)。每局结束后可选 MC 奖励回填。
     """
@@ -378,9 +379,28 @@ def collect_selfplay(episodes, model, depth, width, out_dir, max_rows, write_leg
                         vals.append(b.score(Board.BLACK) - b.score(Board.WHITE))
                     else:
                         vals.append(model(b))
-
-            # 采集 ε：使用我们自己的 epsilon（与训练 ε 无关）
-            (a0, a1), _ = epsilon_greedy(collect_eps, options, vals, (greed_i, greed_j), 0.0)
+            
+            # # 采集 ε：使用我们自己的 epsilon（与训练 ε 无关）
+            # (a0, a1), _ = epsilon_greedy(collect_eps, options, vals, (greed_i, greed_j), 0.0)
+            
+            # === 修改开始：替换ε-greedy为价值概率选择 ===
+            if len(options) > 0:
+                # 将估值转换为概率分布
+                vals_array = np.array(vals)
+    
+            # 处理极端值，防止数值不稳定
+            vals_array = np.clip(vals_array, -10, 10)
+    
+            # 应用softmax（温度参数=selection_temperature）
+            temperature = max(0.01,selection_temperature)
+            exp_vals = np.exp(vals_array / temperature)
+            probabilities = exp_vals / np.sum(exp_vals)
+    
+            # 根据概率分布采样动作
+            chosen_idx = np.random.choice(len(options), p=probabilities)
+            a0, a1 = options[chosen_idx]
+            selected_val = vals_array[chosen_idx]
+            # === 修改结束 ===
 
             # 记录转移（在 flip 前做编码）
             s_3ch = board_to_3ch_uint8(b, p)
@@ -534,6 +554,10 @@ def main():
     # 新增胜率停止参数
     parser.add_argument("--stop-winrate", type=float, default=0.95, 
                        help="当对随机模型的胜率达到此值时停止训练")
+    
+    # 新增价值概率选择的温度参数（采集模式专用）
+    parser.add_argument("--selection-temperature", type=float, default=0.3,
+                        help="价值概率选择的温度参数（采集模式专用）")
 
     args = parser.parse_args()
 
@@ -570,6 +594,7 @@ def main():
             metrics_every_games=50,
             mc_reward=args.mc_reward,
             mc_mode=args.mc_mode,
+            selection_temperature=args.selection_temperature,
         )
         # 收尾
         try:
