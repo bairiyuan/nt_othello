@@ -275,9 +275,10 @@ class ShardWriter:
         self.buf: Dict[str, list] = {
             "s": [], "a": [], "s_next": [], "r": [], "d": [],
             "legal_s": [], "legal_s_next": [],
+            "vals": []  # 新增vals字段
         }
 
-    def add(self, s, a, s_next, r, d, legal_s, legal_s_next):
+    def add(self, s, a, s_next, r, d, legal_s, legal_s_next, vals):
         self.buf["s"].append(s)
         self.buf["a"].append(np.int16(a))
         self.buf["s_next"].append(s_next)
@@ -285,6 +286,7 @@ class ShardWriter:
         self.buf["d"].append(np.uint8(d))
         self.buf["legal_s"].append(legal_s)
         self.buf["legal_s_next"].append(legal_s_next)
+        self.buf["vals"].append(vals)  # 新增vals保存
 
     def flush(self):
         if len(self.buf["a"]) == 0:
@@ -427,6 +429,12 @@ def collect_selfplay(episodes, model, depth, width, out_dir, max_rows, write_leg
             legal_next = legal_mask_from_board(b, p_next)
             a_idx = ij_to_a(a0, a1)
 
+            # ----新增代码：将vals转换为完整向量并保存----
+            full_vals = np.zeros(64, dtype=np.float32)
+            for (idx, (ii, jj)) in enumerate(options):
+                pos_idx = ij_to_a(ii, jj)  # 位置索引 (0-63)
+                full_vals[pos_idx] = vals[idx]
+
             # 严格唯一键（全局）
             key = hash64_sa(s_can, a_idx)
             seen_total += 1
@@ -437,6 +445,7 @@ def collect_selfplay(episodes, model, depth, width, out_dir, max_rows, write_leg
                     r=np.float32(reward), d=np.uint8(1 if done_now else 0),
                     legal_s=legal_s if write_legal else np.zeros((64,), np.uint8),
                     legal_s_next=legal_next if write_legal else np.zeros((64,), np.uint8),
+                    vals=full_vals  # 新增：保存计算好的价值向量
                 )
                 ep_buf.append(rec)
 
@@ -471,7 +480,8 @@ def collect_selfplay(episodes, model, depth, width, out_dir, max_rows, write_leg
             writer.add(
                 s=rec["s"], a=rec["a"], s_next=rec["s_next"],
                 r=rec["r"], d=rec["d"],
-                legal_s=rec["legal_s"], legal_s_next=rec["legal_s_next"]
+                legal_s=rec["legal_s"], legal_s_next=rec["legal_s_next"],
+                vals=rec["vals"]  # 新增vals
             )
             unique_total += 1
             shard_keys.add(k)
