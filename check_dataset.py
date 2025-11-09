@@ -203,6 +203,22 @@ def check_shard(npz_path: Path,
             }
             stat["samples"].append(rec)
 
+    # 检查 vals 字段
+    if "vals" in z:
+        vals = z["vals"]
+        stat["has_vals"] = True
+        stat["vals_shape"] = vals.shape
+        stat["vals_dtype"] = str(vals.dtype)
+        
+        # 检查 vals 的值域合理性
+        if N > 0:
+            vals_arr = np.asarray(vals)
+            stat["vals_range"] = (float(np.min(vals_arr)), float(np.max(vals_arr)))
+            stat["vals_mean"] = float(np.mean(vals_arr))
+            stat["vals_std"] = float(np.std(vals_arr))
+    else:
+        stat["has_vals"] = False
+
     return stat
 
 def scan_dir(data_dir: Path) -> Tuple[list, int]:
@@ -302,6 +318,14 @@ def main():
         topk = 10
         top_idx = np.argsort(-act_hist_global)[:topk]
         print("top actions:", [(int(idx), int(act_hist_global[idx])) for idx in top_idx])
+        # 添加vals统计
+        vals_shards = [s for s in rows_list if s.get("has_vals", False)]
+        if vals_shards:
+            print(f"vals_shards: {len(vals_shards)}/{len(files)}")
+            vals_mins = [s['vals_range'][0] for s in vals_shards if 'vals_range' in s]
+            vals_maxs = [s['vals_range'][1] for s in vals_shards if 'vals_range' in s]
+            if vals_mins and vals_maxs:
+                print(f"vals_range_global: [{min(vals_mins):.3f}, {max(vals_maxs):.3f}]")
 
     # 写 CSV 报告
     report_path = Path(args.report_csv) if args.report_csv else (data_dir / "dataset_report.csv")
@@ -312,17 +336,46 @@ def main():
             "in_shard_dups","global_dups",
             "pass_ratio","done_ratio","reward_mean",
             "reward_neg","reward_zero","reward_pos",
-            "has_legal"
+            "has_legal","has_vals",  # ← 新增 has_vals
+            "vals_min","vals_max","vals_mean","vals_std"  # ← 新增vals统计
         ]
         writer.writerow(header)
+        # for s in rows_list:
+        #     rn, rz, rp = s["reward_hist_-1/0/+1"]
+        #     writer.writerow([
+        #         s["file"], s["rows"], s["shape_ok"], s["dtype_ok"], s["values_ok"],
+        #         s["in_shard_dups"], s["global_dups"],
+        #         f"{s['pass_ratio']:.6f}", f"{s['done_ratio']:.6f}", f"{s['reward_mean']:.6f}",
+        #         rn, rz, rp, s["has_legal"]
+        #     ])
+        # 修正缩进 - 确保在for循环内
         for s in rows_list:
             rn, rz, rp = s["reward_hist_-1/0/+1"]
-            writer.writerow([
+            
+            # 构建基础行数据
+            row_data = [
                 s["file"], s["rows"], s["shape_ok"], s["dtype_ok"], s["values_ok"],
                 s["in_shard_dups"], s["global_dups"],
                 f"{s['pass_ratio']:.6f}", f"{s['done_ratio']:.6f}", f"{s['reward_mean']:.6f}",
                 rn, rz, rp, s["has_legal"]
-            ])
+            ]
+            
+            # 添加vals相关信息
+            if "has_vals" in s:
+                row_data.append(s["has_vals"])
+                if s["has_vals"] and "vals_range" in s:
+                    row_data.extend([
+                        f"{s['vals_range'][0]:.6f}", 
+                        f"{s['vals_range'][1]:.6f}",
+                        f"{s['vals_mean']:.6f}", 
+                        f"{s['vals_std']:.6f}"
+                    ])
+                else:
+                    row_data.extend(["", "", "", ""])  # 空值
+            else:
+                row_data.extend(["", "", "", "", ""])  # 空值
+            
+            writer.writerow(row_data)
     print(f"\n[ok] report saved -> {report_path}")
 
 if __name__ == "__main__":
